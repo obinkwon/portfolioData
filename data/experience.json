@@ -1,0 +1,105 @@
+[
+    {
+        "title": "에스원 쇼룸 페이지 구축",
+        "company": "DARUM",
+        "summary": "담당자 별 문의 메일 전송 개발, 가격 견적 프로세스 개발, 화면 별 시뮬레이션 동작 프로세스 개발",
+        "range": "2024.07.04 ~ 2024.08.30",
+        "skills": [
+            "Java",
+            "JavaScript",
+            "Thymeleaf",
+            {
+                "name": "Oracle",
+                "icon": "database"
+            },
+            "Jeus"
+        ]
+    },
+    {
+        "title": "전자교과서 화면 개발",
+        "company": "DARUM",
+        "summary": "삼각함수 이용한 일식, 월식 시뮬레이션, 삼각함수와 빛의 굴절 공식을 이용한 빛의 굴절 시뮬레이션등 동작 스크립트 개발",
+        "range": "2024.04.01 ~ 2024.06.28",
+        "skills": [
+            "JavaScript",
+            "Jquery"
+        ]
+    },
+    {
+        "title": "NH농협은행 완판알리미 녹취 시스템 구축",
+        "company": "DARUM",
+        "summary": "AS-IS 시스템 회사 프레임워크로 재 구축, 스크립트 결재 프로세스 개선, 관리자 관리 및 권한 관리 개발",
+        "range": "2023.05.22 ~ 2023.12.22",
+        "skills": [
+            "Java",
+            "Thymeleaf",
+            {
+                "name": "Tibero",
+                "icon": "database"
+            },
+            "Tomcat"
+        ]
+    },
+    {
+        "title": "하나금융그룹 홈페이지 통합 리뉴얼",
+        "company": "DARUM",
+        "summary": "파일 업로드 모듈 개발, 그룹 소개 메뉴 개발, 기업지배구조 메뉴 개발",
+        "range": "2022.10.17 ~ 2023.02.23",
+        "skills": [
+            "Java",
+            "JSP",
+            "Thymeleaf",
+            "Postgresql",
+            "Tomcat"
+        ]
+    },
+    {
+        "title": "METTIT 소셜 커뮤니티 플랫폼 개발",
+        "company": "DARUM",
+        "summary": "글 조회, 등록, 수정, 삭제 API 및 화면 작업, 네이버 로그인 OAUTH 연동, 추가 유지보수 개선 작업 (2022.05.02 ~ 2022.09.01)",
+        "range": "2022.02.04 ~ 2022.04.30",
+        "skills": [
+            "Java",
+            "React",
+            "Mysql",
+            "AWS"
+        ]
+    },
+    {
+        "title": "삼성 엔지니어링 EDP 구축",
+        "company": "DARUM",
+        "summary": "PQGrid 라이브러리를 이용한 표 조회, Chartjs 라이브러리를 이용한 데이터 차트화",
+        "range": "2023.05.22 ~ 2023.12.22",
+        "skills": [
+            "React"
+        ]
+    },
+    {
+        "title": "라오나크 키인 홈페이지 구축",
+        "company": "DARUM",
+        "summary": "다국어 처리, 모바일 접속 시 모바일 URL 연결 처리",
+        "range": "2021.08.02 ~ 2021.08.22",
+        "skills": [
+            "Java",
+            "JSP",
+            "Mysql",
+            "Tomcat"
+        ]
+    },
+    {
+        "title": "스타필드 홈페이지 유지보수",
+        "company": "DARUM",
+        "summary": "이벤트 페이지 개발, 고객 이슈 사항 처리, 페이지 개선 및 접속 량 확인 업무",
+        "range": "2020.10.16 ~ 2021.06.30",
+        "skills": [
+            "Java",
+            "JSP",
+            {
+                "name": "Oracle",
+                "icon": "database"
+            },
+            "Jeus",
+            "WebtoB"
+        ]
+    }
+]

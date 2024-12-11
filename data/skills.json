@@ -1,0 +1,43 @@
+[
+  {
+    "grouping": "Languages, Operating Systems & Tools",
+    "skills": [
+      "Java",
+      "Jquery",
+      "JavaScript",
+      "React",
+      "JSP",
+      "Thymeleaf",
+      "Python",
+      "Git",
+      "Subversion",
+      "SpringBoot",
+      "Tomcat",
+      "Apache"
+    ]
+  },
+  {
+    "grouping": "Data Management",
+    "skills": [
+      "Mysql",
+      {
+        "name": "Oracle",
+        "icon": "database"
+      },
+      {
+        "name": "Tibero",
+        "icon": "database"
+      },
+      "Postgresql"
+    ]
+  },
+  {
+    "grouping": "Containers & Cloud",
+    "skills": [
+      "AWS",
+      "Linux",
+      "Jeus",
+      "WebtoB"
+    ]
+  }
+]
