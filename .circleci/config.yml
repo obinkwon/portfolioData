@@ -24,5 +24,4 @@ jobs:
       - checkout
       - run:
           name: HUGO build for Test domain
-          command: |
-            pwd
+          command: hugo
