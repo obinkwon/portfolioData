@@ -13,7 +13,7 @@ jobs:
     # 빌드를 실행할 도커 이미지를 설정한다.
     # circleci에서 제공하는 이미지를 사용해야 한다.
     docker:
-      - image: circleci/node:14
+      - image: cibuilds/hugo:latest
     # Deploy의 과정을 한단계씩 정의한다.
     steps:
       # 소스를 checkout 하는 과정
