@@ -37,7 +37,7 @@ jobs:
       - run:
           name: HUGO deploy
           command:  |
-            mv -f public/* obinkwon.github.io/
+            mv -R public/* obinkwon.github.io/
             cd obinkwon.github.io/ 
             git add .
             git config --global user.email "noreply@example.com"
