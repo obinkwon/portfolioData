@@ -43,5 +43,5 @@ jobs:
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io"
-            git pull origin master
-            git push origin master
+            git pull origin main
+            git push origin main
