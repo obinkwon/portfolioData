@@ -1,32 +1,45 @@
 version: 2.1
 
-workflows:
-  version: 2
-  deploy:
-    jobs:
-      - build
-
-# 빌드 작업을 정의한 jobs 스크립트 형식으로 작성
 jobs:
-  # job의 이름을 정의
-  build: 
-    # 빌드를 실행할 도커 이미지를 설정한다.
-    # circleci에서 제공하는 이미지를 사용해야 한다.
+  build:
     docker:
       - image: cibuilds/hugo:latest
-    # Deploy의 과정을 한단계씩 정의한다.
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: public
     steps:
-      # 소스를 checkout 하는 과정
       - checkout
-      # 코드 전체를 컴파일 하는 과정
+
+      # Initialize submodules
       - run:
-          name: Deploy to Build Repository
+          name: "Initialize and update git submodules"
           command: |
-            git config --global user.name "obinkwon"
-            git config --global user.email "obin0125@gmail.com"
+            git submodule update --init --recursive
+
+      # Display the project structure
+      - run:
+          name: "List project files"
+          command: ls -la
+
+      # Build the Hugo site
+      - run:
+          name: "Build Hugo site"
+          command: hugo -v -d ./public
+
+      # Verify build output
+      - run:
+          name: "Verify build output"
+          command: ls -la ./public
+
+      # Deploy to build repository
+      - run:
+          name: "Deploy to build repository"
+          command: |
             cd public
             git init
             git remote add origin https://github.com/obinkwon/obinkwon.github.io.git
             git add .
-            git commit -m "Deploy from CircleCI"
+            git config --global user.name "CircleCI Bot"
+            git config --global user.email "noreply@example.com"
+            git commit -m "Automated publish to build-repo [ci skip]"
             git push --force origin main
