@@ -1,45 +1,42 @@
 version: 2.1
 
-jobs:
+workflows:
+  version: 2
   build:
-    docker:
-      - image: cibuilds/hugo:latest
-    working_directory: ~/hugo
-    environment:
-      HUGO_BUILD_DIR: public
-    steps:
+    jobs:
+      # Clone the repository
       - checkout
 
-      # Initialize submodules
-      - run:
-          name: "Initialize and update git submodules"
-          command: |
-            git submodule update --init --recursive
+      # Install Hugo using Go
+      - setup:
+          name: Install Hugo
+          docker:
+            - image: circleci/golang:1.18 # Use a Go base image
+          steps:
+            - run:
+                name: Install Hugo
+                command: |
+                  wget https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_0.84.0_Linux-64bit.deb
+                  sudo dpkg -i hugo_0.84.0_Linux-64bit.deb
 
-      # Display the project structure
-      - run:
-          name: "List project files"
-          command: ls -la
+      # Build Hugo site
+      - build:
+          name: Build Hugo Site
+          docker:
+            - image: circleci/golang:1.18
+          steps:
+            - checkout
+            - run:
+                name: Build Hugo
+                command: hugo
 
-      # Build the Hugo site
-      - run:
-          name: "Build Hugo site"
-          command: hugo -v -d ./public
-
-      # Verify build output
-      - run:
-          name: "Verify build output"
-          command: ls -la ./public
-
-      # Deploy to build repository
-      - run:
-          name: "Deploy to build repository"
-          command: |
-            cd public
-            git init
-            git remote add origin https://github.com/obinkwon/obinkwon.github.io.git
-            git add .
-            git config --global user.name "CircleCI Bot"
-            git config --global user.email "noreply@example.com"
-            git commit -m "Automated publish to build-repo [ci skip]"
-            git push --force origin main
+      # Deploy the site
+      - deploy:
+          name: Deploy Hugo Site
+          docker:
+            - image: circleci/golang:1.18
+          steps:
+            - checkout
+            - run:
+                name: Copy build files
+                command: cp -R public/* /path/to/your/deployment/location/
