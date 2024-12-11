@@ -25,4 +25,8 @@ jobs:
           command:  |
             pwd
             ls -la
+            cp hugo.toml config.toml
+      - run:
+          name: HUGO build
+          command:  |
             hugo
