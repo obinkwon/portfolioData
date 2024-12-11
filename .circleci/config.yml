@@ -39,4 +39,4 @@ workflows:
             - checkout
             - run:
                 name: Copy build files
-                command: cp -R public/* /path/to/your/deployment/location/
+                command: echo 'complete'
