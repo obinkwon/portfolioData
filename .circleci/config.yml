@@ -36,7 +36,6 @@ jobs:
       - run:
           name: HUGO deploy
           command:  |
-            cd public/ 
             mv public/* obinkwon.github.io/
             cd obinkwon.github.io/ 
             git add .
