@@ -16,7 +16,7 @@ jobs:
       - image: circleci/golang:1.9
 
     # Go의 workspace를 설정해준다.
-    working_directory: /go/src/github.com/Votereum/votereum-core
+    working_directory: /
     
     steps:
     # Deploy의 과정을 한단계씩 정의한다.
@@ -24,4 +24,6 @@ jobs:
       - checkout
       - run:
           name: HUGO build for Test domain
-          command: hugo
+          command:  |
+            pwd
+            hugo
