@@ -24,4 +24,5 @@ jobs:
           name: HUGO build for Test domain
           command:  |
             pwd
+            ls -la
             hugo
