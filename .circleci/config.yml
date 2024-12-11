@@ -11,7 +11,6 @@ jobs:
   build:
   	# 빌드를 실행할 도커 이미지를 설정한다.
     # circleci에서 제공하는 이미지를 사용해야 한다.
-    # https://circleci.com/docs/2.0/circleci-images/
     docker:
       # Ethereum의 프로그래밍 언어인 Go 컴파일을 해야하므로 go 이미지 세팅
       - image: circleci/golang:1.9
