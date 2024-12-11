@@ -22,10 +22,3 @@ jobs:
     # Deploy의 과정을 한단계씩 정의한다.
       # 소스를 checkout 하는 과정
       - checkout
-      - run: 
-        name: Install Hugo
-        command: echo "install"
-      # 코드 전체를 컴파일 하는 과정
-      - run: hugo
-      # 테스트 성공시 good 출력
-      - run: echo "good"
