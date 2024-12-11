@@ -24,9 +24,7 @@ jobs:
       - checkout
       - run: 
         name: Install Hugo
-        command: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_0.84.0_Linux-64bit.deb
-          sudo dpkg -i hugo_0.84.0_Linux-64bit.deb
+        command: echo "install"
       # 코드 전체를 컴파일 하는 과정
       - run: hugo
       # 테스트 성공시 good 출력
