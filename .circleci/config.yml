@@ -13,7 +13,8 @@ jobs:
     # circleci에서 제공하는 이미지를 사용해야 한다.
     docker:
       # Ethereum의 프로그래밍 언어인 Go 컴파일을 해야하므로 go 이미지 세팅
-      - image: circleci/golang:1.9
+      #- image: circleci/golang:1.9
+      - image: cibuilds/hugo:latest
     
     steps:
     # Deploy의 과정을 한단계씩 정의한다.
