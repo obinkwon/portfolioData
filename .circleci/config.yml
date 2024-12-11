@@ -21,12 +21,21 @@ jobs:
       # 소스를 checkout 하는 과정
       - checkout
       - run:
-          name: HUGO build for Test domain
+          name: HUGO config file copy
           command:  |
             pwd
             ls -la
             cp hugo.toml config.toml
       - run:
           name: HUGO build
+          command: hugo --baseURL "https://obinkwon.github.io/"
+      - run:
+          name: HUGO deploy
           command:  |
-            hugo
+            cd public/ 
+            pwd
+            git add .
+            git config --global user.email "noreply@example.com"
+            git config --global user.name "CircleCI Bot"
+            git commit -m "Automated publish to obinkwon.github.io"
+            git push https://github.com/obinkwon/obinkwon.github.io.git origin master
