@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = http://github.com/obinkwon/obinkwon.github.io.git
-	branch = main
