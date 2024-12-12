@@ -1,0 +1,26 @@
+title = "obinkwon"
+baseURL = "https://obinkwon.github.io/"
+theme = "hugo-resume"
+languageCode = "en-us"
+
+[params]
+email = "obin02@naver.com"
+favicon = "/favicon.ico"
+firstName = "obin"
+lastName = "kwon"
+profileImage = "img/obin.jpg"
+showBoards  = true
+showSocializations = true
+sections = ["education","skills","experience"]
+
+[[params.handles]]
+    name = "GitHub"
+    link = "https://github.com/obinkwon/"
+
+[[params.handles]]
+    name = "Tistory"
+    link = "https://coding-arrangement.tistory.com/"
+    icon = "t"
+
+[outputs]
+home = ["HTML", "JSON"]
