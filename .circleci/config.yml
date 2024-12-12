@@ -22,20 +22,13 @@ jobs:
           name: HUGO build
           command: hugo --baseURL "https://obinkwon.github.io/"
       - run:
-          name: HUGO deploy repo clone
-          command:  |
-            git clone https://github.com/obinkwon/obinkwon.github.io.git
-            cp -rf public/* obinkwon.github.io/
-      - run:
           name: HUGO deploy
           command:  |
-            cd obinkwon.github.io/ 
+            cd public/
             ls -la
             git init
-            git remote add origin https://github.com/obinkwon/obinkwon.github.io
-            git branch -M master
             git add .
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io"
-            git push
+            git push origin main
