@@ -13,10 +13,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: HUGO submodule sync
-          commend:  |
-            git submodule sync
-            git submodule update --init
+          name: HUGO config file copy
+          command:  |
+            git submodule update --init --recursive
       - run:
           name: HUGO config file copy
           command:  |
