@@ -26,11 +26,11 @@ jobs:
           command:  |
             git clone https://github.com/obinkwon/obinkwon.github.io.git
             cp -rf public/* obinkwon.github.io/
-            cd obinkwon.github.io/ 
-            ls -la
       - run:
           name: HUGO deploy
           command:  |
+            cd obinkwon.github.io/ 
+            ls -la
             git add .
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
