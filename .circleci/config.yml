@@ -22,11 +22,21 @@ jobs:
           name: HUGO build
           command: hugo --baseURL "https://obinkwon.github.io/"
       - run:
-          name: HUGO deploy
+          name: HUGO main deploy
           command:  |
             rm -r config.toml
+            cd public/
             ls -la
-            git add public/.
+            git add .
+            git config --global user.email "noreply@example.com"
+            git config --global user.name "CircleCI Bot"
+            git commit -m "Automated publish to obinkwon.github.io [ci skip]"
+            git push origin main
+      - run:
+          name: HUGO submodule deploy
+          command:  |
+            ls -la
+            git add .
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io [ci skip]"
