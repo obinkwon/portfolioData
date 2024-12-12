@@ -31,8 +31,11 @@ jobs:
           command:  |
             cd obinkwon.github.io/ 
             ls -la
+            git init
+            git remote add origin https://github.com/obinkwon/obinkwon.github.io
+            git branch -M master
             git add .
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io"
-            git push origin main
+            git push
