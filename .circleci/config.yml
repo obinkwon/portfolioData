@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - checkout
-      -run:
+      - run:
           name: HUGO submodule sync
           commend:  |
             git submodule sync
