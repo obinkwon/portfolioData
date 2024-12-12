@@ -11,7 +11,7 @@ lastName = "kwon"
 profileImage = "img/obin.jpg"
 showBoards  = true
 showSocializations = true
-sections = ["skills","experience"]
+sections = ["education","skills","experience"]
 
 [[params.handles]]
     name = "GitHub"

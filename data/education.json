@@ -1,15 +1,20 @@
 [
     {
-        "school":"[Rochester Institute of Technology](https://rit.edu)",
-        "degree":"Bachelor of Science",
-        "major":"Management Information Systems",
-        "notes":"Beta Gamma Signma, High Honors",
-        "range":"2006 - 2008"
+        "school": "평생교육진흥원(학점은행제)",
+        "major": "컴퓨터공학 학사",
+        "status": "수료",
+        "range": "2019 - 2021"
     },
     {
-        "school":"Clinton Community College",
-        "degree":"Associate of Applied Science",
-        "major":"Computer Information Systems",
-        "range":"2004 - 2006"
+        "school": "인하공업전문대학",
+        "major": "컴퓨터정보과 전문학사",
+        "status": "졸업",
+        "range": "2014 - 2019"
+    },
+    {
+        "school": "김포제일고등학교",
+        "major": "인문계열 이과",
+        "status": "졸업",
+        "range": "2011 - 2014"
     }
 ]
