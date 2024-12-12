@@ -25,7 +25,7 @@ jobs:
           name: HUGO deploy repo clone
           command:  |
             git clone https://github.com/obinkwon/obinkwon.github.io.git
-            cp -R public/* obinkwon.github.io/
+            cp -rf public/* obinkwon.github.io/
             cd obinkwon.github.io/ 
             ls -la
       - run:
