@@ -24,6 +24,7 @@ jobs:
       - run:
           name: HUGO deploy
           command:  |
+            rm -r config.toml
             ls -la
             git add public/.
             git config --global user.email "noreply@example.com"
