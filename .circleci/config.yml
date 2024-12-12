@@ -26,8 +26,7 @@ jobs:
           command:  |
             cd public/
             ls -la
-            git init
-            git add .
+            git add public/.
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io"
