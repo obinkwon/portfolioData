@@ -30,4 +30,4 @@ jobs:
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io [ci skip]"
-            git push origin main
+            git push origin master
