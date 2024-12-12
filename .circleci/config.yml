@@ -36,7 +36,7 @@ jobs:
             git config --global user.name "CircleCI Bot"
             git commit -m "Automated publish to obinkwon.github.io [ci skip]"
             git status
-            git push origin master
+            git push origin main
       - run:
           name: HUGO submodule deploy
           command:  |
