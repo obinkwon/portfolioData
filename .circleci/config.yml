@@ -12,6 +12,11 @@ jobs:
     
     steps:
       - checkout
+      -run:
+          name: HUGO submodule sync
+          commend:  |
+            git submodule sync
+            git submodule update --init
       - run:
           name: HUGO config file copy
           command:  |
@@ -27,8 +32,6 @@ jobs:
             rm -r config.toml
             cd public/
             ls -la
-            git submodule sync
-            git submodule update --init
             git add .
             git config --global user.email "noreply@example.com"
             git config --global user.name "CircleCI Bot"
